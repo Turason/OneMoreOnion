@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneMoreOnion</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>🧅 OneMoreOnion</h1>
+<div><button id="export">Export data</button> <label class="btn">Import data<input type="file" id="import" accept="application/json" hidden></label></div></header>
+<main>
+<section><h2>Recipes</h2><ul id="recipes"></ul>
+<form id="recipe-form"><input name="name" placeholder="Recipe name" required>
+<textarea name="ingredients" rows="4" placeholder="One per line, e.g.&#10;200 g Spaghetti&#10;4 Tomato" required></textarea>
+<button>Add recipe</button></form></section>
+<section><h2>Meal plan</h2><ul id="plan"></ul></section>
+<section><h2>Shopping list</h2><ul id="shopping"></ul><button id="bought">Mark all as bought</button></section>
+<section><h2>Inventory</h2><ul id="inventory"></ul>
+<form id="inv-form"><input name="name" placeholder="Item" required><input name="qty" type="number" step="any" min="0" placeholder="Qty" required><input name="unit" placeholder="Unit"><button>Add</button></form></section>
+</main>
+<p class="note">Your data stays on this device (browser storage). Use Export/Import to back it up to your own cloud storage.</p>
+<script src="core.js"></script><script src="app.js"></script></body></html>
